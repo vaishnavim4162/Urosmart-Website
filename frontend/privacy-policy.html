@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="policy-body">
+    <header class="policy-header">
+        <div class="header-content">
+            <h1>Privacy Policy</h1>
+            <button onclick="history.back()" class="btn-done">Done</button>
+        </div>
+    </header>
+
+    <main class="policy-content">
+        <section>
+            <h2>Privacy Policy</h2>
+            <p class="last-updated">Last updated: March 26, 2026</p>
+        </section>
+
+        <section>
+            <h3>1. Introduction</h3>
+            <p>Welcome to SIMATS UroSmart, developed and operated by SIMATS. We are committed to protecting your personal data. This policy explains how we collect, process, and store information when you use this application.</p>
+        </section>
+
+        <section>
+            <h3>2. Data We Collect</h3>
+            <p>We collect the following categories of data:</p>
+            <ul>
+                <li><strong>Account data:</strong> email address and a hashed password (stored on the SIMATS backend server).</li>
+                <li><strong>Medical images:</strong> microscopy images you select from your photo library for urinalysis analysis.</li>
+                <li><strong>Analysis results:</strong> detection results (presence/confidence of yeast, calcium oxalate, triple phosphate, squamous cells, uric acid) generated from your images.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>3. How We Collect Your Data</h3>
+            <p>Data is collected in the following ways:</p>
+            <ul>
+                <li>You provide account data directly during sign-up.</li>
+                <li>You voluntarily select and submit microscopy images for analysis.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>4. How Your Data Is Processed</h3>
+            <div class="info-box blue">
+                <div class="info-icon">
+                    <img src="assets/eye.svg" alt="Eye">
+                </div>
+                <p>All analysis is performed by SIMATS's own backend server (hosted at 14.139.187.229), operated and maintained exclusively by SIMATS. We do NOT use any third-party AI services (e.g. OpenAI, Google AI, or similar). When you submit a scan, your microscopy image is sent over HTTPS to our own detection server, which runs a YOLOv8 model trained by SIMATS. The image is used only for that real-time detection request and is not retained on the server afterward.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>5. All Uses of Your Data</h3>
+            <p>We use your data to:</p>
+            <ul>
+                <li>Provide and operate the urinalysis detection service.</li>
+                <li>Authenticate you and manage your account.</li>
+                <li>Store and sync your medical reports between your device and our backend.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>6. Data Sharing</h3>
+            <p>We do NOT share your data with any third-party companies or AI services. All servers involved (authentication, report storage, and AI detection) are operated solely by SIMATS.</p>
+        </section>
+
+        <section>
+            <h3>7. Data Security</h3>
+            <p>All data transfers use HTTPS/TLS encryption. Your password is stored as a bcrypt hash and never transmitted in plaintext. Authentication tokens are stored securely in your browser's local storage.</p>
+        </section>
+
+        <section>
+            <h3>8. Your Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access the data we hold about you.</li>
+                <li>Delete your account and all associated data via Profile → Delete Account.</li>
+                <li>Opt out of federated learning at any time.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>9. Medical Disclaimer</h3>
+            <div class="info-box pink">
+                <div class="info-icon">
+                    <img src="assets/kit.svg" alt="Disclaimer">
+                </div>
+                <p>SIMATS UroSmart is for informational and clinical decision-support purposes only. It does NOT constitute medical advice, diagnosis, or treatment. All AI-generated results must be verified by a qualified healthcare professional before any clinical use. Always consult a physician before making medical decisions.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>10. Contact Us</h3>
+            <p>For questions about this Privacy Policy, contact: <strong>privacy@simats.ac.in</strong></p>
+        </section>
+    </main>
+</body>
+</html>

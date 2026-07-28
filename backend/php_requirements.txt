@@ -1,0 +1,11 @@
+# PHP Backend Requirements
+# Primary dependency manager is Composer (see composer.json)
+
+# Required Packages
+phpmailer/phpmailer: ^6.9
+
+# Server Extensions (Commonly required)
+php-mysql
+php-json
+php-curl
+php-mbstring

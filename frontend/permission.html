@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Usage Permission - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="permission-body">
+    <div class="permission-card">
+        <div class="hand-icon">
+            <img src="assets/hand.svg" alt="Permission Icon">
+        </div>
+        <h2>Data Usage Permission</h2>
+        
+        <div class="policy-list">
+            <div class="policy-item">
+                <img src="assets/cloud.svg" alt="Cloud">
+                <p>We collect and store your microscopy scan images and analysis results on our <b>secure SIMATS server</b> to provide the app's functionality.</p>
+            </div>
+            <div class="policy-item">
+                <img src="assets/shield.svg" alt="Shield">
+                <p>Your data is <b>not shared with any third-party services</b>. All servers are owned and operated exclusively by SIMATS.</p>
+            </div>
+            <div class="policy-item">
+                <img src="assets/trash.svg" alt="Trash">
+                <p>Scan images sent for analysis are <b>not retained</b> on the server after the result is returned.</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <img src="assets/warning.svg" alt="Warning">
+            <span>For informational use only. Always consult a qualified healthcare professional.</span>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-allow" onclick="window.location.href='login.html'">Allow</button>
+            <button class="btn-deny" onclick="window.location.href='index.html'">I Do Not Accept</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Handle API file downloads
+RewriteRule ^api/files/reports/([^/]+)$ api/files/download_report.php?file=$1 [L,QSA]
+
+# Handle Extensionless PHP Requests
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L,QSA]
+
+# Fix for Authorization header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

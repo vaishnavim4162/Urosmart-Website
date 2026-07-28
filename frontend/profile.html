@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/api.js"></script>
+</head>
+<body class="profile-body">
+    <a href="dashboard.html" class="btn-back">
+        <span>← Back to Dashboard</span>
+    </a>
+
+    <div class="profile-card">
+        <div class="avatar-large">
+            <img src="assets/user.svg" alt="Profile">
+        </div>
+        <h2>My Profile</h2>
+
+        <div class="profile-section">
+            <div class="profile-section-header">
+                <img src="assets/mail.svg" alt="Email">
+                <span>Email Address</span>
+            </div>
+            <div class="email-box" id="user-email">
+                Loading...
+            </div>
+        </div>
+
+        <div class="settings-list">
+            <div class="settings-item" id="change-password-btn" style="cursor: pointer;">
+                <div class="item-info">
+                    <img src="https://img.icons8.com/ios-glyphs/24/2196F3/lock.png" alt="Password">
+                    <span>Change Password</span>
+                </div>
+                <span>⌄</span>
+            </div>
+
+            <div class="settings-item delete" id="delete-account-btn" style="cursor: pointer;">
+                <div class="item-info">
+                    <img src="https://img.icons8.com/material-rounded/24/F44336/trash.png" alt="Delete">
+                    <span>Delete Account</span>
+                </div>
+            </div>
+            <p class="delete-subtext">This action cannot be undone. All your data will be permanently deleted.</p>
+        </div>
+
+        <div class="legal-section">
+            <h6>Privacy & Legal</h6>
+            <a href="privacy-policy.html" class="legal-item">
+                <span>Privacy Policy</span>
+                <span>›</span>
+            </a>
+            <a href="terms-conditions.html" class="legal-item">
+                <span>Terms & Conditions</span>
+                <span>›</span>
+            </a>
+            <a href="medical-disclaimer.html" class="legal-item orange">
+                <span>Medical Disclaimer</span>
+                <span>›</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const userStr = localStorage.getItem('user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                document.getElementById('user-email').textContent = user.email;
+            } else {
+                window.location.href = 'login.html';
+            }
+        };
+
+        document.getElementById('change-password-btn').onclick = () => {
+            const user = JSON.parse(localStorage.getItem('user'));
+            sessionStorage.setItem('reset_email', user.email);
+            window.location.href = 'reset-password.html';
+        };
+
+        document.getElementById('delete-account-btn').onclick = async () => {
+            if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+                try {
+                    await apiRequest('auth/delete-account.php', {});
+                    localStorage.clear();
+                    sessionStorage.clear();
+                    alert('Account deleted successfully');
+                    window.location.href = 'signup.html';
+                } catch (error) {
+                    alert('Error: ' + error.message);
+                }
+            }
+        };
+    </script>
+</body>
+</html>

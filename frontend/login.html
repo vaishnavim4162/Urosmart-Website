@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="permission-body">
+    <div class="login-card">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="UroSmart Logo">
+            <div class="logo-text">UROSMART</div>
+        </div>
+        <h2>Log In</h2>
+        <p class="subtitle">Sign in to access your medical dashboard</p>
+        
+        <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder="enter email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" placeholder="enter password" required>
+                    <img src="assets/eye.svg" alt="Toggle Password" class="password-toggle">
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <label class="remember-me">
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+                <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Log In</button>
+        </form>
+
+        <div id="message" style="margin-top: 1rem; font-size: 0.9rem; color: #FF3B30; display: none;"></div>
+
+        <p class="signup-footer">Don't have an account? <a href="signup.html">Create Now</a></p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        document.querySelector('form').onsubmit = async (e) => {
+            e.preventDefault();
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'none';
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const result = await apiRequest('auth/login.php', { email, password });
+                // Save token for future use
+                localStorage.setItem('access_token', result.access_token);
+                localStorage.setItem('user', JSON.stringify(result.user));
+                
+                alert('Login successful!');
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                messageDiv.textContent = error.message;
+                messageDiv.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>

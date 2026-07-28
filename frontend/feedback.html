@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .feedback-body { background: #F8F9FA; min-height: 100vh; padding: 20px; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; }
+        .feedback-card { background: white; border-radius: 24px; padding: 30px; width: 100%; max-width: 450px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); text-align: center; }
+        
+        .feedback-header img { width: 60px; margin-bottom: 15px; }
+        .feedback-header h2 { font-size: 1.6rem; font-weight: 800; margin: 0 0 8px; color: #000; }
+        .feedback-header p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+        
+        hr { border: none; border-top: 1px solid #eee; margin: 0 0 25px; }
+        
+        .rating-item { margin-bottom: 25px; text-align: center; }
+        .rating-item label { display: block; font-weight: 700; font-size: 0.95rem; color: #000; margin-bottom: 10px; }
+        .stars { display: flex; justify-content: center; gap: 8px; }
+        .star { cursor: pointer; color: #E0E0E0; font-size: 32px; transition: color 0.2s; }
+        .star.active { color: #FFD700; }
+
+        .comment-section { text-align: left; margin-top: 30px; }
+        .comment-section label { display: block; font-weight: 700; font-size: 0.95rem; color: #000; margin-bottom: 4px; }
+        .comment-section span { font-size: 0.8rem; color: #999; display: block; margin-bottom: 10px; }
+        .comment-box { width: 100%; min-height: 100px; padding: 15px; border-radius: 12px; border: 1px solid #E0E0E0; background: white; font-family: inherit; font-size: 0.95rem; outline: none; resize: none; }
+
+        .btn-submit { width: 100%; background: #82CAFF; color: white; border: none; padding: 16px; border-radius: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 25px; transition: background 0.2s; }
+        .btn-submit:hover { background: #4A90E2; }
+        
+        .btn-skip { display: block; color: #999; text-decoration: underline; font-size: 0.9rem; margin-top: 15px; background: none; border: none; cursor: pointer; width: 100%; }
+
+        .success-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 1000; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    </style>
+</head>
+<body class="feedback-body">
+    <div class="feedback-card">
+        <div class="feedback-header">
+            <img src="https://img.icons8.com/color/96/speech-bubble-with-star.png" alt="Icon">
+            <h2>How was your experience?</h2>
+            <p>Your feedback helps us improve UroSmart</p>
+            <p id="feedback-case-info" style="font-weight: 700; color: #4A90E2; margin-top: -10px;"></p>
+        </div>
+        
+        <hr>
+
+        <form id="feedback-form">
+            <div class="rating-item" data-key="image_clarity">
+                <label>How clear was the scan image?</label>
+                <div class="stars">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+            </div>
+
+            <div class="rating-item" data-key="accuracy">
+                <label>Was the scan analysis accurate?</label>
+                <div class="stars">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+            </div>
+
+            <div class="rating-item" data-key="ease_of_use">
+                <label>How easy was it to submit a scan?</label>
+                <div class="stars">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+            </div>
+
+            <div class="rating-item" data-key="overall">
+                <label>How satisfied are you with the app overall?</label>
+                <div class="stars">
+                    <span class="star" data-val="1">★</span><span class="star" data-val="2">★</span><span class="star" data-val="3">★</span><span class="star" data-val="4">★</span><span class="star" data-val="5">★</span>
+                </div>
+            </div>
+
+            <div class="comment-section">
+                <label>Any additional comments or suggestions?</label>
+                <span>Optional</span>
+                <textarea class="comment-box" id="comments"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Feedback</button>
+            <button type="button" class="btn-skip" onclick="window.location.href='medical-reports.html'">Skip for now</button>
+        </form>
+    </div>
+
+    <div id="success-overlay" class="success-overlay">
+        <img src="https://img.icons8.com/color/96/checked--v1.png" alt="Success">
+        <h2>Thank You!</h2>
+        <p>Your feedback has been submitted successfully.</p>
+        <button class="btn-submit" style="width: 200px; margin-top: 20px;" onclick="window.location.href='medical-reports.html'">Continue</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const reportId = urlParams.get('id');
+        const ratings = { image_clarity: 0, accuracy: 0, ease_of_use: 0, overall: 0 };
+
+        // Fetch case info to display
+        async function fetchCaseInfo() {
+            if (!reportId) return;
+            try {
+                const token = localStorage.getItem('access_token');
+                const res = await fetch(`http://127.0.0.1/urosmatttt_backend/api/reports/index.php?id=${reportId}`, {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                const data = await res.json();
+                if (data.reports && data.reports.length > 0) {
+                    document.getElementById('feedback-case-info').textContent = `Case: ${data.reports[0].case_number}`;
+                }
+            } catch (e) {}
+        }
+        fetchCaseInfo();
+
+        document.querySelectorAll('.rating-item').forEach(item => {
+            const key = item.dataset.key;
+            const stars = item.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.onclick = () => {
+                    const val = parseInt(star.dataset.val);
+                    ratings[key] = val;
+                    stars.forEach(s => {
+                        s.classList.toggle('active', parseInt(s.dataset.val) <= val);
+                    });
+                };
+            });
+        });
+
+        document.getElementById('feedback-form').onsubmit = async (e) => {
+            e.preventDefault();
+            if (Object.values(ratings).some(v => v === 0)) {
+                alert('Please provide all ratings.'); return;
+            }
+            const user = JSON.parse(localStorage.getItem('user') || '{}');
+            const data = { user_id: user.id || 0, report_id: reportId || 0, ...ratings, comments: document.getElementById('comments').value };
+            try {
+                const res = await fetch('http://127.0.0.1/urosmatttt_backend/api/feedback.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                if (res.ok) document.getElementById('success-overlay').style.display = 'flex';
+            } catch (err) { alert('Submission failed.'); }
+        };
+    </script>
+</body>
+</html>

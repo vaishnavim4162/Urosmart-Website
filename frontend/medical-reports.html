@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Reports - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reports-body {
+            background: linear-gradient(180deg, #80CAFF 0%, #4A90E2 50%, #4A90E2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .reports-header {
+            padding: 40px 25px 20px;
+            color: white;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+        }
+        .reports-header h1 { font-size: 2.5rem; margin: 0 0 8px; font-weight: 700; }
+        .sync-status { font-size: 0.9rem; opacity: 0.9; display: flex; align-items: center; gap: 6px; }
+        .sync-icon { width: 8px; height: 8px; background: #81C784; border-radius: 50%; box-shadow: 0 0 5px rgba(129,199,132,0.5); }
+
+        .reports-container {
+            background: white;
+            border-radius: 40px 40px 0 0;
+            min-height: calc(100vh - 180px);
+            color: #333;
+            padding: 35px 25px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+        }
+        .reports-container::-webkit-scrollbar { display: none; }
+        .reports-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 18px 50px;
+            border-radius: 30px;
+            border: 1px solid #f0f0f0;
+            background: #fff;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            outline: none;
+        }
+        .search-icon { position: absolute; left: 18px; top: 18px; opacity: 0.6; }
+        .calendar-icon { position: absolute; right: 18px; top: 18px; cursor: pointer; }
+
+        .all-reports-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #666;
+            font-weight: 500;
+        }
+        .btn-clear {
+            background: #FFEBEE;
+            color: #F44336;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        #reports-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 25px; color: #000; }
+
+        .reports-list { display: flex; flex-direction: column; gap: 18px; padding-bottom: 40px; }
+        .report-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+        .report-info h4 { font-size: 1.2rem; margin: 0 0 5px; color: #000; font-weight: 700; }
+        .detected-text { font-size: 0.9rem; color: #E57373; font-weight: 500; }
+        
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-view { background: #E3F2FD; color: #2196F3; }
+        .btn-download { background: #F1F8E9; color: #4CAF50; }
+        .btn-delete { background: #FFEBEE; color: #F44336; }
+        
+        .action-btn img { width: 18px; height: 18px; }
+        .action-btn:active { transform: scale(0.9); }
+
+        .no-reports-box { text-align: center; padding-top: 150px; color: #999; font-size: 1.1rem; }
+
+        /* Date Picker Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .date-card {
+            background: #fff;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .date-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .date-header h2 { font-size: 1.2rem; font-weight: 700; margin: 0; }
+        .modal-btn { background: none; border: none; color: #333; font-weight: 500; cursor: pointer; font-size: 0.95rem; }
+        .calendar-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding: 0 40px; }
+        .calendar-nav h3 { font-size: 1.1rem; margin: 0; font-weight: 600; }
+        .calendar-nav button { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 30px; }
+        .day-label { font-size: 0.85rem; color: #999; font-weight: 500; margin-bottom: 10px; }
+        .days-container { display: contents; }
+        .calendar-day { height: 40px; display: flex; justify-content: center; align-items: center; font-size: 1rem; cursor: pointer; border-radius: 50%; color: #000; font-weight: 500; }
+        .calendar-day.selected { background: #C62828; color: white; font-weight: 700; }
+        .calendar-day.empty { cursor: default; }
+        .btn-show-all { width: 100%; background: #2196F3; color: white; border: none; padding: 15px; border-radius: 30px; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+    </style>
+</head>
+<body class="reports-body">
+    <div class="reports-header">
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+        <h1>Medical Reports</h1>
+        <div class="sync-status">
+            <span class="sync-icon"></span>
+            Synced 1m ago
+        </div>
+    </div>
+
+    <div class="reports-container">
+        <div class="search-box">
+            <img src="https://img.icons8.com/material-outlined/20/000000/visible.png" class="search-icon" alt="view">
+            <input type="text" id="report-search" placeholder="Search for patient name or ID">
+            <img src="https://img.icons8.com/material-outlined/20/4A90E2/calendar--v1.png" class="calendar-icon" alt="date">
+        </div>
+
+        <div class="all-reports-row">
+            <span>All Reports</span>
+            <button class="btn-clear" onclick="clearAllReports()">
+                <img src="https://img.icons8.com/material-rounded/14/F44336/trash.png" alt="delete">
+                Clear All
+            </button>
+        </div>
+
+        <h2 id="reports-title">Medical Reports (0)</h2>
+
+        <div id="reports-list" class="reports-list">
+            <div class="no-reports-box"><p>No reports found</p></div>
+        </div>
+    </div>
+
+    <div id="date-modal" class="modal-overlay">
+        <div class="modal-content date-card">
+            <div class="date-header">
+                <button class="modal-btn" onclick="closeDateModal()">Cancel</button>
+                <h2>Select Date</h2>
+                <button class="modal-btn" onclick="applyDateFilter()">Done</button>
+            </div>
+            <div class="calendar-nav">
+                <button onclick="prevMonth()">❮</button>
+                <h3 id="current-month-year">May 2026</h3>
+                <button onclick="nextMonth()">❯</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="day-label">M</div><div class="day-label">T</div><div class="day-label">W</div>
+                <div class="day-label">T</div><div class="day-label">F</div><div class="day-label">S</div><div class="day-label">S</div>
+                <div id="calendar-days" class="days-container"></div>
+            </div>
+            <button class="btn-show-all" onclick="showAllReports()">Show All Reports</button>
+        </div>
+    </div>
+
+    <script>
+        let allReports = [];
+        let currentDate = new Date();
+        let selectedDate = new Date();
+
+        function openDateModal() {
+            document.getElementById('date-modal').style.display = 'flex';
+            renderCalendar();
+        }
+
+        function closeDateModal() {
+            document.getElementById('date-modal').style.display = 'none';
+        }
+
+        function renderCalendar() {
+            const daysContainer = document.getElementById('calendar-days');
+            const monthYearLabel = document.getElementById('current-month-year');
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            monthYearLabel.textContent = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' }).format(currentDate);
+            const firstDay = new Date(year, month, 1).getDay();
+            const startOffset = firstDay === 0 ? 6 : firstDay - 1;
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            daysContainer.innerHTML = '';
+            for (let i = 0; i < startOffset; i++) {
+                daysContainer.innerHTML += '<div class="calendar-day empty"></div>';
+            }
+            for (let d = 1; d <= daysInMonth; d++) {
+                const isSelected = selectedDate.getDate() === d && selectedDate.getMonth() === month && selectedDate.getFullYear() === year;
+                daysContainer.innerHTML += `<div class="calendar-day ${isSelected ? 'selected' : ''}" onclick="selectDate(${d})">${d}</div>`;
+            }
+        }
+
+        function selectDate(day) {
+            selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+            renderCalendar();
+        }
+
+        function prevMonth() { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); }
+        function nextMonth() { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); }
+
+        function applyDateFilter() {
+            const filtered = allReports.filter(report => {
+                const rDate = new Date(report.report_date);
+                return rDate.getDate() === selectedDate.getDate() && rDate.getMonth() === selectedDate.getMonth() && rDate.getFullYear() === selectedDate.getFullYear();
+            });
+            renderReports(filtered);
+            closeDateModal();
+        }
+
+        function showAllReports() { renderReports(allReports); closeDateModal(); }
+
+        async function fetchReports() {
+            try {
+                const token = localStorage.getItem('access_token');
+                const res = await fetch('http://127.0.0.1/urosmatttt_backend/api/reports/index.php', {
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                const data = await res.json();
+                if (data.reports) { allReports = data.reports; renderReports(allReports); }
+            } catch (error) { console.error('Failed to fetch reports:', error); }
+        }
+
+        function renderReports(reports) {
+            const list = document.getElementById('reports-list');
+            const title = document.getElementById('reports-title');
+            title.textContent = `Medical Reports (${reports.length})`;
+            
+            if (reports.length === 0) {
+                list.innerHTML = '<div class="no-reports-box"><p>No reports found</p></div>';
+                return;
+            }
+
+            list.innerHTML = reports.map(report => {
+                const date = new Date(report.report_date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                
+                // Detection Summary Logic
+                let detected = [];
+                if (report.results.yeast.present) detected.push('Yeast');
+                if (report.results.triple_phosphate.present) detected.push('Triple Phosphate');
+                if (report.results.calcium_oxalate.present) detected.push('Calcium Oxalate');
+                if (report.results.squamous_cells.present) detected.push('Squamous Cells');
+                if (report.results.uric_acid.present) detected.push('Uric Acid');
+                
+                const detectionStr = detected.length > 0 ? `Detected: ${detected.join(', ')}` : 'No substances detected';
+
+                return `
+                <div class="report-card">
+                    <div class="report-info">
+                        <h4>${report.case_number}</h4>
+                        <p class="detected-text">${detectionStr}</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn btn-view" onclick="viewReport(${report.id})" title="View">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        </button>
+                        <button class="action-btn btn-download" onclick="downloadReport(${report.id})" title="Download">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        </button>
+                        <button class="action-btn btn-delete" onclick="deleteReport(${report.id})" title="Delete">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                        </button>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        function viewReport(id) {
+            window.open(`report-results.html?id=${id}`, '_blank');
+        }
+
+        async function downloadReport(id) {
+            window.open(`report-results.html?id=${id}&auto_download=true`, '_blank');
+        }
+
+        async function deleteReport(id) {
+            if (!confirm('Are you sure you want to delete this report?')) return;
+            try {
+                const token = localStorage.getItem('access_token');
+                const res = await fetch(`http://127.0.0.1/urosmatttt_backend/api/reports/delete.php`, {
+                    method: 'POST',
+                    headers: { 
+                        'Authorization': 'Bearer ' + token,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ report_id: id })
+                });
+                const result = await res.json();
+                if (res.ok) {
+                    alert('Report deleted successfully');
+                    fetchReports();
+                } else {
+                    alert('Delete failed: ' + (result.error || result.message));
+                }
+            } catch (err) {
+                console.error(err);
+                alert('An error occurred while deleting');
+            }
+        }
+
+        document.getElementById('report-search').oninput = (e) => {
+            const term = e.target.value.toLowerCase();
+            renderReports(allReports.filter(r => r.case_number.toLowerCase().includes(term)));
+        };
+
+        document.querySelector('.calendar-icon').onclick = openDateModal;
+
+        async function clearAllReports() {
+            if (!confirm('Are you sure you want to clear all reports? This action cannot be undone.')) return;
+            try {
+                const token = localStorage.getItem('access_token');
+                const res = await fetch(`http://127.0.0.1/urosmatttt_backend/api/reports/clear.php`, {
+                    method: 'POST',
+                    headers: { 'Authorization': 'Bearer ' + token }
+                });
+                const result = await res.json();
+                if (res.ok) {
+                    alert('All reports cleared successfully');
+                    fetchReports();
+                } else {
+                    alert('Failed to clear reports: ' + (result.error || result.message));
+                }
+            } catch (err) {
+                console.error(err);
+                alert('An error occurred');
+            }
+        }
+
+        window.onload = fetchReports;
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="user-avatar">
+                <img src="assets/user.svg" alt="User">
+            </div>
+        </div>
+        <div class="menu-list">
+            <a href="profile.html" class="menu-item">
+                <img src="https://img.icons8.com/material-rounded/24/000000/user.png" alt="Profile">
+                <span>Profile</span>
+            </a>
+            <a href="privacy-policy.html" class="menu-item">
+                <img src="assets/hand.svg" alt="Privacy">
+                <span>Privacy Policy</span>
+            </a>
+            <a href="terms-conditions.html" class="menu-item">
+                <img src="https://img.icons8.com/material-rounded/24/000000/terms-and-conditions.png" alt="Terms">
+                <span>Terms & Conditions</span>
+            </a>
+        </div>
+        <div class="sidebar-footer">
+            Version 1.0.0
+        </div>
+    </nav>
+
+    <header class="dashboard-header">
+        <div class="top-bar">
+            <div class="menu-btn" id="menu-toggle">☰</div>
+            <a href="login.html" class="logout-btn" id="logout-btn">
+                <span>Logout</span>
+                <img src="https://img.icons8.com/ios-glyphs/20/FFCDD2/logout-rounded--v1.png" alt="logout" style="width: 16px; opacity: 0.8;">
+            </a>
+        </div>
+        <div class="welcome-section">
+            <h3>Welcome To The</h3>
+            <h2>UROSMART</h2>
+        </div>
+    </header>
+
+    <main class="dashboard-content">
+        <a href="upload-scan.html" class="action-card">
+            <div class="icon-box blue">
+                <img src="assets/scanner.svg" alt="Upload">
+            </div>
+            <h4>Upload medical scans for analysis</h4>
+            <p>Submit 2 images for processing</p>
+        </a>
+
+        <a href="medical-reports.html" class="action-card">
+            <div class="icon-box green">
+                <img src="assets/document.svg" alt="Reports">
+            </div>
+            <h4>View and download patient reports</h4>
+            <p>Access all medical reports</p>
+        </a>
+
+        <div class="disclaimer-card">
+            <div class="disclaimer-header">
+                <img src="assets/kit.svg" alt="Disclaimer">
+                <h5>⚠️ Medical Disclaimer</h5>
+            </div>
+            <p>This app is for informational use only and does not constitute medical advice. Always consult a qualified healthcare professional before making any clinical decisions.</p>
+            <a href="medical-disclaimer.html" class="disclaimer-link">Tap to read full disclaimer →</a>
+        </div>
+    </main>
+
+    <script>
+        // Simple authentication check
+        window.onload = () => {
+            const user = localStorage.getItem('user');
+            if (!user) {
+                window.location.href = 'login.html';
+            }
+        };
+
+        document.getElementById('logout-btn').onclick = () => {
+            localStorage.clear();
+        };
+
+        // Sidebar logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        menuToggle.onclick = () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        };
+
+        overlay.onclick = () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+    </script>
+</body>
+</html>

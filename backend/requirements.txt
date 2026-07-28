@@ -1,0 +1,15 @@
+# Python Backend Requirements
+# Based on documentation references to Flask and TensorFlow Lite
+
+# Web Framework
+flask
+flask-cors
+
+# Machine Learning & Image Processing
+tensorflow
+numpy
+Pillow
+
+# Utilities
+requests
+python-dotenv

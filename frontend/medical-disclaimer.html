@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Disclaimer - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .disclaimer-item {
+            margin-bottom: 1.5rem;
+            padding: 1.25rem;
+            background: #F5F5F5;
+            border-radius: 12px;
+            border: 1px solid #E0E0E0;
+        }
+        .disclaimer-item h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #000;
+        }
+        .disclaimer-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        .warning-highlight {
+            background: #FFF3E0;
+            border: 1px solid #FFE0B2;
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .warning-highlight h4 {
+            color: #E65100;
+            margin: 0 0 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .acknowledgement {
+            background: #E8F5E9;
+            border: 1px solid #C8E6C9;
+            padding: 1.25rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+        .acknowledgement img {
+            width: 20px;
+            margin-top: 3px;
+        }
+        .acknowledgement p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #2E7D32;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="policy-body">
+    <header class="policy-header">
+        <div class="header-content">
+            <h1>Medical Disclaimer</h1>
+            <button onclick="history.back()" class="btn-done">Done</button>
+        </div>
+    </header>
+
+    <main class="policy-content">
+        <section>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <img src="assets/kit.svg" alt="Medical" style="width: 40px;">
+                <div>
+                    <h2 style="margin: 0;">Medical Disclaimer</h2>
+                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Please read carefully before use</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="warning-highlight">
+            <h4>⚠️ For Informational Purposes Only</h4>
+            <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #444;">UroSmart is a clinical decision-support aid intended to help trained medical professionals interpret urinalysis microscopy images. It is NOT a substitute for professional medical advice, diagnosis, or treatment. The analysis results displayed by this app must not be used as the sole basis for any medical decision.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>1. No Medical Advice</h3>
+            <p>The content provided by UroSmart — including text, AI-generated analysis results, bounding box detections, and PDF reports — is for informational and educational purposes only. It does not constitute medical advice and should not be relied upon as such.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>2. Consult a Healthcare Professional</h3>
+            <p>Always seek the advice of your physician, radiologist, or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay seeking it because of something you have read or seen in this application.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>3. No Doctor-Patient Relationship</h3>
+            <p>Use of UroSmart does not establish a doctor-patient relationship between you and the developers, SIMATS, or any affiliated institution.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>4. Accuracy Limitations</h3>
+            <p>The AI detection model provides probabilistic results and may produce false positives or false negatives. Results are dependent on image quality, sample preparation, and microscope settings. All results must be verified by a qualified laboratory technician or physician before clinical use.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>5. Regulatory Status</h3>
+            <p>UroSmart is intended for use by trained healthcare professionals in conjunction with standard clinical practice. It is not approved as a standalone diagnostic device. Regulatory clearance documentation has been submitted to Apple App Review.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>6. Emergency Situations</h3>
+            <p>If you believe a patient is experiencing a medical emergency, call emergency services immediately. Do not rely on this app in emergency situations.</p>
+        </div>
+
+        <div class="disclaimer-item">
+            <h3>7. Contact</h3>
+            <p>For regulatory or medical questions, please contact SIMATS at <strong>medical@simats.ac.in</strong></p>
+        </div>
+
+        <div class="acknowledgement">
+            <img src="https://img.icons8.com/material-rounded/24/2E7D32/checked-checkbox.png" alt="Checked">
+            <p>By using UroSmart you acknowledge that you have read and understood this disclaimer, that you are a trained healthcare professional, and that this app is to be used as a decision-support tool only.</p>
+        </div>
+    </main>
+</body>
+</html>

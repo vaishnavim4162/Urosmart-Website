@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Scan Submission - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/api.js"></script>
+    <style>
+        .upload-body {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            height: auto;
+            overflow-y: auto;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn-back {
+            align-self: flex-start;
+            background: white;
+            color: #2196F3;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-card {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-section img {
+            width: 32px;
+            margin-top: 5px;
+        }
+
+        .header-section h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0;
+            color: #000;
+        }
+
+        .description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .warning-text {
+            color: #FF9800;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: #000;
+        }
+
+        .input-box {
+            background: #F5F7FA;
+            border: 1px solid #E4E7EB;
+            padding: 1.25rem;
+            border-radius: 16px;
+            width: 100%;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .upload-area {
+            background: #F5F7FA;
+            border: 2px dashed #E4E7EB;
+            border-radius: 20px;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area:hover {
+            border-color: #2196F3;
+            background: #f0f7ff;
+        }
+
+        .upload-area img.placeholder {
+            width: 48px;
+            opacity: 0.5;
+            margin-bottom: 1rem;
+        }
+
+        .upload-area p {
+            color: #999;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .preview-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .btn-submit {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .btn-cancel {
+            background: #E0E0E0;
+            color: #666;
+            border: none;
+            padding: 1.1rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #2196F3;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="upload-body">
+    <a href="dashboard.html" class="btn-back">
+        <span>← Back to Dashboard</span>
+    </a>
+
+    <div class="upload-card">
+        <div class="header-section">
+            <img src="assets/document.svg" alt="Scan">
+            <h2>New Scan Submission</h2>
+        </div>
+
+        <p class="description">Upload two medical scans for analysis. Ensure images are clear and properly oriented.</p>
+        
+        <div class="warning-text">
+            <span>⚠️</span>
+            <span>Please upload the same type of medical scan images. Do not upload different types of scans.</span>
+        </div>
+
+        <form id="upload-form">
+            <div class="form-group">
+                <label for="case_number">Case No. *</label>
+                <input type="text" id="case_number" class="input-box" placeholder="Enter Case No." required>
+            </div>
+
+            <div class="form-group">
+                <label>First Medical Image</label>
+                <div class="upload-area" id="area-1">
+                    <img src="assets/user.svg" alt="Upload" class="placeholder">
+                    <p>Drop image here or click to browse</p>
+                    <img id="preview-1" class="preview-img">
+                    <input type="file" id="file-1" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Second Medical Image</label>
+                <div class="upload-area" id="area-2">
+                    <img src="assets/user.svg" alt="Upload" class="placeholder">
+                    <p>Drop image here or click to browse</p>
+                    <img id="preview-2" class="preview-img">
+                    <input type="file" id="file-2" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Submit</button>
+                <a href="dashboard.html" class="btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loading-text">Uploading images...</p>
+    </div>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const area1 = document.getElementById('area-1');
+        const area2 = document.getElementById('area-2');
+        const file1 = document.getElementById('file-1');
+        const file2 = document.getElementById('file-2');
+        const preview1 = document.getElementById('preview-1');
+        const preview2 = document.getElementById('preview-2');
+        const overlay = document.getElementById('loading-overlay');
+        const loadingText = document.getElementById('loading-text');
+
+        // Handle area clicks
+        area1.onclick = () => file1.click();
+        area2.onclick = () => file2.click();
+
+        // Handle file selection preview
+        file1.onchange = (e) => handlePreview(e.target.files[0], preview1);
+        file2.onchange = (e) => handlePreview(e.target.files[0], preview2);
+
+        function handlePreview(file, previewElement) {
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewElement.src = e.target.result;
+                    previewElement.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            
+            if (!file1.files[0] || !file2.files[0]) {
+                alert('Please select both medical images.');
+                return;
+            }
+
+            overlay.style.display = 'flex';
+            const caseNumber = document.getElementById('case_number').value;
+
+            try {
+                // 1. Upload and Analyze first image
+                loadingText.textContent = 'Analyzing first image...';
+                const formData1 = new FormData();
+                formData1.append('file', file1.files[0]);
+                formData1.append('type', 'image');
+                const res1 = await apiUpload('files/upload.php', formData1);
+                
+                const analysis1 = await apiRequest('reports/analyze.php', { filename: res1.filename });
+                if (!analysis1.valid) {
+                    throw new Error('First image is invalid or not a recognized urine sediment scan.');
+                }
+
+                // 2. Upload and Analyze second image
+                loadingText.textContent = 'Analyzing second image...';
+                const formData2 = new FormData();
+                formData2.append('file', file2.files[0]);
+                formData2.append('type', 'image');
+                const res2 = await apiUpload('files/upload.php', formData2);
+
+                const analysis2 = await apiRequest('reports/analyze.php', { filename: res2.filename });
+                if (!analysis2.valid) {
+                    throw new Error('Second image is invalid or not a recognized urine sediment scan.');
+                }
+
+                // 3. Create report with merged detections (taking max confidence)
+                loadingText.textContent = 'Generating final report...';
+                
+                const merged = {};
+                const keys = ['yeast', 'triple_phosphate', 'calcium_oxalate', 'squamous_cells', 'uric_acid'];
+                
+                keys.forEach(key => {
+                    const det1 = analysis1.detections[key];
+                    const det2 = analysis2.detections[key];
+                    
+                    merged[key + '_present'] = det1.present || det2.present;
+                    merged[key + '_confidence'] = Math.max(det1.confidence, det2.confidence);
+                });
+
+                const reportData = {
+                    case_number: caseNumber,
+                    image_paths: JSON.stringify([res1.filename, res2.filename]),
+                    boxed_paths: JSON.stringify([analysis1.boxed_image, analysis2.boxed_image]),
+                    ...merged
+                };
+
+                const createResult = await apiRequest('reports/index.php', reportData);
+
+                // Save to session storage for the results page to use immediately
+                sessionStorage.setItem('last_report', JSON.stringify({
+                    id: createResult.report.id,
+                    ...reportData
+                }));
+
+                window.location.href = `report-results.html?id=${createResult.report.id}`;
+
+            } catch (error) {
+                alert('Error: ' + error.message);
+                overlay.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

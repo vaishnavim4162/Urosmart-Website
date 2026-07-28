@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account - UroSmart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="permission-body">
+    <div class="login-card">
+        <div class="logo-circle">
+            <img src="assets/user.svg" alt="User Icon">
+        </div>
+        <h2>Create an Account</h2>
+        
+        <form onsubmit="event.preventDefault(); window.location.href='login.html';">
+            <div class="form-group">
+                <label for="phone">Phone No.</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="phone" placeholder="Phone No." required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder="Enter email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="password" placeholder="enter password" required>
+                    <img src="assets/eye.svg" alt="Toggle Password" class="password-toggle">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="input-wrapper">
+                    <input type="password" id="confirm-password" placeholder="confirm password" required>
+                    <img src="assets/eye.svg" alt="Toggle Password" class="password-toggle">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-login">Sign Up</button>
+        </form>
+
+        <div id="message" style="margin-top: 1rem; font-size: 0.9rem; color: #FF3B30; display: none;"></div>
+
+        <p class="signup-footer">Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        document.querySelector('form').onsubmit = async (e) => {
+            e.preventDefault();
+            const messageDiv = document.getElementById('message');
+            messageDiv.style.display = 'none';
+
+            const phone_number = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Simple validation
+            if (password !== confirmPassword) {
+                messageDiv.textContent = 'Passwords do not match';
+                messageDiv.style.display = 'block';
+                return;
+            }
+
+            if (!email.endsWith('@gmail.com')) {
+                messageDiv.textContent = 'Only @gmail.com emails are allowed';
+                messageDiv.style.display = 'block';
+                return;
+            }
+
+            if (phone_number.length !== 10) {
+                messageDiv.textContent = 'Phone number must be 10 digits';
+                messageDiv.style.display = 'block';
+                return;
+            }
+
+            try {
+                const result = await apiRequest('auth/signup.php', { phone_number, email, password });
+                alert('Account created successfully! Please login.');
+                window.location.href = 'login.html';
+            } catch (error) {
+                messageDiv.textContent = error.message;
+                messageDiv.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+</html>
