@@ -1,0 +1,5 @@
+"Metric Name","Value","Min","Max","Avg","Med","p95","p99"
+"vus","","","","","","",""
+"http_reqs","","","","","","",""
+"http_req_duration","","","","","","",""
+"http_req_failed","","","","","","",""

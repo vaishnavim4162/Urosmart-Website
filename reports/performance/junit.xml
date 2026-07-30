@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Performance Validation Suite" time="0.09">
+  <testsuite name="Performance SLA Checks" tests="360" failures="5" skipped="0" timestamp="2026-07-29T08:33:01.651Z">
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Index Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Permission Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ForgotPassword Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.001">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ResetPassword Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Dashboard Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite UploadScan Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.001">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ReportResults Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+      <failure message="AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01">AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01</failure>
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite MedicalReports Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Profile Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+      <failure message="AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01">AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01</failure>
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Feedback Page Load under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+      <failure message="AssertionError: Error rate of 1.20% exceeded SLA: expected 0.012 to be below 0.01">AssertionError: Error rate of 1.20% exceeded SLA: expected 0.012 to be below 0.01</failure>
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Login API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite Signup API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite CheckEmail API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.001">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite ChangePassword API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+      <failure message="AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01">AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01</failure>
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FeedbackSubmit API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 1 VU HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 1 VU Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 1 VU 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 1 VU Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 1 VU Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 50 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 50 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 50 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 50 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 50 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 100 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 100 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 100 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 100 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+      <failure message="AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01">AssertionError: Error rate of 1.00% exceeded SLA: expected 0.01 to be below 0.01</failure>
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 100 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 500 VUs HTTP Status Validation" name="HTTP Status Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 500 VUs Response Time Validation" name="Response Time Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 500 VUs 95th Percentile Validation" name="95th Percentile Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 500 VUs Error Rate Validation" name="Error Rate Validation" time="0.000">
+    </testcase>
+    <testcase classname="UroSmart Enterprise Performance Validation Suite FileUpload API under 500 VUs Database Performance Validation" name="Database Performance Validation" time="0.000">
+    </testcase>
+  </testsuite>
+</testsuites>

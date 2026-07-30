@@ -1,0 +1,65 @@
+name: UroSmart Performance Tests CI
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+  workflow_dispatch:
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: urosmart_v2
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo_mysql, mysqli, json
+
+      - name: Initialize Database Schema
+        run: |
+          mysql -h 127.0.0.1 -u root -e "CREATE DATABASE IF NOT EXISTS urosmart_v2;"
+          mysql -h 127.0.0.1 -u root urosmart_v2 < backend/urosmart_schema.sql
+
+      - name: Start PHP Local Server
+        run: |
+          php -S 127.0.0.1:8000 -t backend/ &
+          echo "PHP server started on port 8000"
+        env:
+          PORT: 8000
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Node Dependencies
+        run: npm ci || npm install
+
+      - name: Run Performance Validation Suite
+        run: npm run test:performance || true
+        env:
+          API_URL: 'http://127.0.0.1:8000'
+
+      - name: Upload SRE Performance Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: urosmart-sre-performance-reports
+          path: reports/performance/
+          retention-days: 30

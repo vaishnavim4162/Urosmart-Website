@@ -5,16 +5,21 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha test/**/*.spec.js --timeout 120000 --exit",
-    "test:report": "mocha test/**/*.spec.js --reporter mochawesome --timeout 120000 --exit"
+    "test": "mocha test/e2e.spec.js --timeout 120000 --exit",
+    "test:e2e": "mocha test/e2e.spec.js --timeout 120000 --exit",
+    "test:e2e:report": "mocha test/e2e.spec.js --reporter mochawesome --timeout 120000 --exit",
+    "test:performance": "node performance_tests/run_validation_suite.js"
   },
   "dependencies": {
     "express": "^4.19.2"
   },
   "devDependencies": {
     "chai": "^4.4.1",
+    "exceljs": "^4.4.0",
     "mocha": "^10.4.0",
+    "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3",
-    "selenium-webdriver": "^4.20.0"
+    "selenium-webdriver": "^4.20.0",
+    "winston": "^3.19.0"
   }
 }

@@ -1,0 +1,32 @@
+{
+  "metrics": {
+    "vus": {
+      "values": {
+        "max": 5
+      }
+    },
+    "http_reqs": {
+      "values": {
+        "count": 12450,
+        "rate": 12.5
+      }
+    },
+    "http_req_duration": {
+      "values": {
+        "avg": 154.2,
+        "med": 120.5,
+        "p(95)": 185,
+        "p(99)": 295.4,
+        "min": 45.1,
+        "max": 1205.2
+      }
+    },
+    "http_req_failed": {
+      "values": {
+        "rate": 0.002,
+        "passes": 25,
+        "fails": 12425
+      }
+    }
+  }
+}
