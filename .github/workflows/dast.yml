@@ -1,0 +1,64 @@
+name: UroSmart DAST Tests CI
+
+on:
+  push:
+    branches: [ main, master, dev ]
+  pull_request:
+    branches: [ main, master, dev ]
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: 'Base URL for the API under test'
+        required: false
+        default: 'http://127.0.0.1/urosmatttt_backend/api'
+      user_token:
+        description: 'Optional user token for authenticated probes'
+        required: false
+        default: ''
+      admin_token:
+        description: 'Optional admin token for privileged probes'
+        required: false
+        default: ''
+
+jobs:
+  dast-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Create DAST Input Config
+        env:
+          BASE_URL: ${{ github.event.inputs.base_url || vars.DAST_BASE_URL || 'http://127.0.0.1/urosmatttt_backend/api' }}
+          USER_TOKEN: ${{ github.event.inputs.user_token || secrets.DAST_USER_TOKEN || '' }}
+          ADMIN_TOKEN: ${{ github.event.inputs.admin_token || secrets.DAST_ADMIN_TOKEN || '' }}
+        run: |
+          mkdir -p automated_test
+          cat > automated_test/input.json <<EOF
+          {
+            "baseUrl": "${BASE_URL}",
+            "user": "${USER_TOKEN}",
+            "admin": "${ADMIN_TOKEN}"
+          }
+          EOF
+
+      - name: Run DAST Discovery and Probe Suite
+        run: |
+          python automated_test/runner.py
+
+      - name: Upload DAST Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: urosmart-dast-report
+          path: |
+            automated_test/report.json
+            automated_test/secrets_report.json
+            automated_test/savepoint.json
+          retention-days: 30
