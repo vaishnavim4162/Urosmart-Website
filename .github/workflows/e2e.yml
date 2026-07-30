@@ -24,7 +24,7 @@ jobs:
         run: npm ci || npm install
 
       - name: Run E2E Tests with Mochawesome Report
-        run: npm run test:report
+        run: npm run test:e2e:report
         env:
           HEADLESS: true
 
