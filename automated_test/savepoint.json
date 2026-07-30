@@ -1,0 +1,90 @@
+{
+  "baseUrl": "http://127.0.0.1/urosmatttt_backend/api",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/db_monitor",
+      "source": "db_monitor.php"
+    },
+    {
+      "method": "POST",
+      "path": "/feedback",
+      "source": "feedback.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/change-password",
+      "source": "auth/change-password.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/check-email",
+      "source": "auth/check-email.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/delete-account",
+      "source": "auth/delete-account.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "source": "auth/login.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/reset-password-email",
+      "source": "auth/reset-password-email.php"
+    },
+    {
+      "method": "POST",
+      "path": "/auth/signup",
+      "source": "auth/signup.php"
+    },
+    {
+      "method": "POST",
+      "path": "/feedback/submit",
+      "source": "feedback/submit.php"
+    },
+    {
+      "method": "GET",
+      "path": "/files/download",
+      "source": "files/download.php"
+    },
+    {
+      "method": "GET",
+      "path": "/files/reports/{file}",
+      "source": "files/download_report.php"
+    },
+    {
+      "method": "POST",
+      "path": "/files/upload",
+      "source": "files/upload.php"
+    },
+    {
+      "method": "POST",
+      "path": "/reports/analyze",
+      "source": "reports/analyze.php"
+    },
+    {
+      "method": "POST",
+      "path": "/reports/clear",
+      "source": "reports/clear.php"
+    },
+    {
+      "method": "POST",
+      "path": "/reports/delete",
+      "source": "reports/delete.php"
+    },
+    {
+      "method": "POST",
+      "path": "/reports",
+      "source": "reports/index.php"
+    },
+    {
+      "method": "GET",
+      "path": "/reports/next-case-number",
+      "source": "reports/next-case-number.php"
+    }
+  ]
+}
